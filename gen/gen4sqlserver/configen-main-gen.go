@@ -30,7 +30,7 @@ func (inst *autoRegistrar) register(factory comFactory) error {
 func (inst*autoRegistrar) addAll() error {
 
     
-    inst.register(&pc249b54360_dsqlserver_Driver{})
+    inst.register(&p3ecabb6dee_driver_Driver{})
 
 
     return nil

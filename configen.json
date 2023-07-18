@@ -4,7 +4,7 @@
         "sources": [
             {
                 "id": "driver",
-                "path": "dsqlserver",
+                "path": "driver",
                 "r": true
             },
             {

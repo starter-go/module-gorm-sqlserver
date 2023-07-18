@@ -38,6 +38,8 @@ github.com/starter-go/afs v0.9.1 h1:KbNSB/+YjFC7OWYsB9bL8MZvOowXKLH8qidZ2PrSyGg=
 github.com/starter-go/afs v0.9.1/go.mod h1:8CnmFENXVgN8QV71S8EJd/Z0QVfSoFmdZrnGBbMDx2A=
 github.com/starter-go/application v0.9.7 h1:jFED9q5MN+0/UKQQNyupvijmMd5LMdLtBEgzlZ6j73A=
 github.com/starter-go/application v0.9.7/go.mod h1:e5Zet+QGLL1/bxCgtPg2S/wI0vD9q71GNKju7bJOtQI=
+github.com/starter-go/application v0.9.9 h1:IpM62HX5IExRiMYWFfn/S5mce7xJr9filLYcuQN2L5U=
+github.com/starter-go/application v0.9.9/go.mod h1:e5Zet+QGLL1/bxCgtPg2S/wI0vD9q71GNKju7bJOtQI=
 github.com/starter-go/base v0.9.5 h1:kH1VI0ags5rWG6zHt483c5bUie5q+RnPXMf1N1arAUY=
 github.com/starter-go/base v0.9.5/go.mod h1:cTaamu+V1rSWCnfkeebl7yVZHlZiBHzxNVZap47wbtw=
 github.com/starter-go/configen v0.9.2 h1:UdjHSxFJU15lVbckJF6gANsGLfJSgzz93ZAZZjbP4d8=
@@ -48,6 +50,8 @@ github.com/starter-go/libgorm v0.9.1 h1:NBmn4puwY7YOgE8lza3iyDRRSnvqE648DY032zqE
 github.com/starter-go/libgorm v0.9.1/go.mod h1:KUv/5yP0HkNm5Zzp1ug2jBBR+1EWLcg9j7O/Hpxqqu0=
 github.com/starter-go/libgorm v0.9.2 h1:Knsb3gAItn07WL0T2I/c1UX9Oj3DCYbJKH+eSmQFJVk=
 github.com/starter-go/libgorm v0.9.2/go.mod h1:KUv/5yP0HkNm5Zzp1ug2jBBR+1EWLcg9j7O/Hpxqqu0=
+github.com/starter-go/libgorm v0.9.3 h1:4qAXwVWAchVTH9EJBh2IkQ91X3hmC5gLg++X0+3mHsM=
+github.com/starter-go/libgorm v0.9.3/go.mod h1:GJFbSOq85HG9HZuI3NEHFvD3qI9xYx9gnTbVpYGFY0U=
 github.com/starter-go/starter v1.0.0 h1:3keOygsu4VS3HdeU36ULzRjlOhJY4XfqqU/8nAUmsGQ=
 github.com/starter-go/starter v1.0.0/go.mod h1:uZgtWlJEg9kiZTUiYspfri5RFAfexNmJ+XHQCtEMrQo=
 github.com/starter-go/vlog v0.9.4 h1:9nVRk46Tco2UHXJDKbShK5SbGDUxxVKxCXUbGOOUe6A=

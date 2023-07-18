@@ -1,4 +1,4 @@
-package dsqlserver
+package driver
 
 import (
 	"errors"
@@ -35,6 +35,15 @@ func (inst *Driver) Registration() *libgorm.DriverRegistration {
 
 // Open ...
 func (inst *Driver) Open(cfg *libgorm.Configuration) (libgorm.Database, error) {
+	db, err := inst.openDB(cfg)
+	if err != nil {
+		return nil, err
+	}
+	builder := &libgorm.DatabaseBuilder{DB: db}
+	return builder.Create(), nil
+}
+
+func (inst *Driver) openDB(cfg *libgorm.Configuration) (*gorm.DB, error) {
 
 	//	dsn := "sqlserver://gorm:LoremIpsum86@localhost:9930/?database=gorm"
 	//	db, err := gorm.Open(sqlserver.Open(dsn), &gorm.Config{})
@@ -63,14 +72,7 @@ func (inst *Driver) Open(cfg *libgorm.Configuration) (libgorm.Database, error) {
 		return nil, errors.New("driver_sqlserver.Open() return nil")
 	}
 
-	db, err := gorm.Open(sqlserver.Open(dsn), &gorm.Config{})
-	if err != nil {
-		return nil, err
-	}
-
-	dbb := &libgorm.DatabaseBuilder{DB: db}
-	db2 := dbb.Create()
-	return db2, nil
+	return gorm.Open(sqlserver.Open(dsn), &gorm.Config{})
 }
 
 func (inst *Driver) prepareForDefaultPort(cfg *libgorm.Configuration) {
