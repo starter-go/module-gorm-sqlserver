@@ -8,7 +8,7 @@ import (
 // type p6df7683da.TableReg in package:github.com/starter-go/module-gorm-sqlserver/src/test/test1
 //
 // id:com-6df7683daab96742-test1-TableReg
-// class:class-512a309140d0ad99eb1c95c8dc0d02f9-TableRegistry
+// class:class-512a309140d0ad99eb1c95c8dc0d02f9-GroupRegistry
 // alias:
 // scope:singleton
 //
@@ -18,7 +18,7 @@ type p6df7683daa_test1_TableReg struct {
 func (inst* p6df7683daa_test1_TableReg) register(cr application.ComponentRegistry) error {
 	r := cr.NewRegistration()
 	r.ID = "com-6df7683daab96742-test1-TableReg"
-	r.Classes = "class-512a309140d0ad99eb1c95c8dc0d02f9-TableRegistry"
+	r.Classes = "class-512a309140d0ad99eb1c95c8dc0d02f9-GroupRegistry"
 	r.Aliases = ""
 	r.Scope = "singleton"
 	r.NewFunc = inst.new
