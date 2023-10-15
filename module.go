@@ -10,8 +10,8 @@ import (
 
 const (
 	theModuleName     = "github.com/starter-go/module-gorm-sqlserver"
-	theModuleVersion  = "v0.9.3"
-	theModuleRevision = 5
+	theModuleVersion  = "v0.9.11"
+	theModuleRevision = 6
 	theModuleResPath  = "src/main/resources"
 )
 
