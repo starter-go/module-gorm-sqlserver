@@ -4,14 +4,14 @@ import (
 	"embed"
 
 	"github.com/starter-go/application"
-	"github.com/starter-go/libgorm/modgorm"
+	"github.com/starter-go/libgorm/modules/libgorm"
 	"github.com/starter-go/module-gorm-sqlserver/gen/gen4sqlserver"
 )
 
 const (
 	theModuleName     = "github.com/starter-go/module-gorm-sqlserver"
-	theModuleVersion  = "v0.9.2"
-	theModuleRevision = 4
+	theModuleVersion  = "v0.9.3"
+	theModuleRevision = 5
 	theModuleResPath  = "src/main/resources"
 )
 
@@ -27,7 +27,7 @@ func Module() application.Module {
 	mb.EmbedResources(theModuleResFS, theModuleResPath)
 	mb.Components(gen4sqlserver.ExportComForGormSqlserver)
 
-	mb.Depend(modgorm.Module())
+	mb.Depend(libgorm.Module())
 
 	return mb.Create()
 }

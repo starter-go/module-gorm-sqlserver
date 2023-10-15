@@ -2,6 +2,7 @@ package main
 
 import (
 	"embed"
+	"os"
 
 	"github.com/starter-go/application"
 	modulegormsqlserver "github.com/starter-go/module-gorm-sqlserver"
@@ -13,7 +14,7 @@ func main() {
 
 	m := module()
 
-	i := starter.Init(nil)
+	i := starter.Init(os.Args)
 	i.MainModule(m)
 	i.WithPanic(true).Run()
 }

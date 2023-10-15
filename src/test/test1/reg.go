@@ -6,7 +6,7 @@ import (
 )
 
 const (
-	theNamespace = "module-gorm-sqlserver/src/test/test1"
+	theGroupURI = "uri:libgorm:group:module-gorm-sqlserver/src/test/test1"
 )
 
 // TableReg ...
@@ -17,30 +17,42 @@ type TableReg struct {
 
 	Context application.Context //starter:inject("context")
 
-	agent libgorm.DatabaseAgent
+	// agent libgorm.DatabaseAgent
 }
 
-func (inst *TableReg) _impl() {
-	inst._as(inst)
+func (inst *TableReg) _impl(a libgorm.Group, b libgorm.GroupRegistry) {
+	a = inst
+	b = inst
 }
 
-// Group ...
-func (inst *TableReg) Group() *libgorm.Group {
+// // Group ...
+// func (inst *TableReg) Group() *libgorm.Group {
 
+// 	return &libgorm.Group{
+// 		Prototypes: list,
+// 		Name:       "default",
+// 		Prefix:     "test1_",
+// 		Enabled:    true,
+// 	}
+// }
+
+// Groups ...
+func (inst *TableReg) Groups() []*libgorm.GroupRegistration {
+	//  inst.agent.Init(c.Database)
+
+	r1 := &libgorm.GroupRegistration{
+		URI:   theGroupURI,
+		Group: inst,
+	}
+
+	return []*libgorm.GroupRegistration{r1}
+}
+
+// Prototypes ...
+func (inst *TableReg) Prototypes() []any {
 	list := make([]any, 0)
 	list = append(list, &Table1{})
 	list = append(list, &Table2{})
 	list = append(list, &Table3{})
-
-	return &libgorm.Group{
-		Prototypes: list,
-		Name:       "default",
-		Prefix:     "test1_",
-		Enabled:    true,
-		OnInit:     inst.onInit,
-	}
-}
-
-func (inst *TableReg) onInit(c *libgorm.TableContext) {
-	inst.agent.Init(c.Database)
+	return list
 }
