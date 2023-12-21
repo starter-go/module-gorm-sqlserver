@@ -5,8 +5,8 @@ import (
 	"os"
 
 	"github.com/starter-go/application"
-	modulegormsqlserver "github.com/starter-go/module-gorm-sqlserver"
 	"github.com/starter-go/module-gorm-sqlserver/gen/gen4test"
+	"github.com/starter-go/module-gorm-sqlserver/modules/sqlserver"
 	"github.com/starter-go/starter"
 )
 
@@ -32,7 +32,7 @@ func module() application.Module {
 
 	mb.EmbedResources(theResFS, "resources")
 	mb.Components(gen4test.ExportComForGormSqlserverTest)
-	mb.Depend(modulegormsqlserver.Module())
+	mb.Depend(sqlserver.Module())
 
 	return mb.Create()
 }

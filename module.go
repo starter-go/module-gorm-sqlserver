@@ -5,7 +5,6 @@ import (
 
 	"github.com/starter-go/application"
 	"github.com/starter-go/libgorm/modules/libgorm"
-	"github.com/starter-go/module-gorm-sqlserver/gen/gen4sqlserver"
 )
 
 const (
@@ -18,16 +17,13 @@ const (
 //go:embed "src/main/resources"
 var theModuleResFS embed.FS
 
-// Module 导出模块 ['github.com/starter-go/module-gorm-sqlserver']
-func Module() application.Module {
+// NewDriverModule 导出模块 ['github.com/starter-go/module-gorm-sqlserver']
+func NewDriverModule() *application.ModuleBuilder {
 
 	mb := &application.ModuleBuilder{}
 	mb.Name(theModuleName).Version(theModuleVersion).Revision(theModuleRevision)
-
 	mb.EmbedResources(theModuleResFS, theModuleResPath)
-	mb.Components(gen4sqlserver.ExportComForGormSqlserver)
-
 	mb.Depend(libgorm.Module())
 
-	return mb.Create()
+	return mb
 }
